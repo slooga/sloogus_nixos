@@ -7,7 +7,7 @@
 		home-manager.inputs.nixpkgs.follows = "nixpkgs";
 	};
 
-	
+	# goober blah
 	outputs = { self, nixpkgs, home-manager, ... }: 
 	let 
 		
