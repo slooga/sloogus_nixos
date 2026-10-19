@@ -16,15 +16,13 @@
 		timezone = "Pacific/Auckland";
 		locale = "en_US.UTF-8";
 		hostname = "nixos";
-		modules = [ ./configuration.nix ];
-		homeModules = [ ./home.nix ];
 		pkgs = nixpkgs.legacyPackages.${system};
 	
 	in {
 		nixosConfigurations = {
 			${hostname} = lib.nixosSystem {
 				inherit system;
-				inherit modules;
+				modules = [ ./configuration.nix ];
 			};
 		};
 		homeConfigurations = {
