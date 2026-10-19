@@ -72,7 +72,7 @@
   };
 
   home.file.".config/hypr/" = {
-    source = ./config/hypr/;
+    source = ./config/hypr;
   	force = true;
   	recursive = true;
   };
