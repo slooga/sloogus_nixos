@@ -2,7 +2,7 @@
 # your system. Help is available in the configuration.nix(5) man page, on
 # https://search.nixos.org/options and in the NixOS manual (`nixos-help`).
 
-{ config, pkgs, ... }:
+{ config, pkgs, pkgs-unstable, ... }:
 
 {
   imports =
@@ -106,23 +106,27 @@
 
   # List packages installed in system profile.
   # You can use https://search.nixos.org/ to find more packages (and options).
-  environment.systemPackages = with pkgs; [
-    vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-    wget
-    alacritty
-    micro
-    fastfetch
-    btop
-    git
-    kitty
-    zsh
-    foot
-  
-  ];
-  environment.systemPackages = with pkgs-unstable; [
-    caelestia-shell.packages.nixos.with-cli = true;
-  
-  ];
+  environment.systemPackages =
+    (with pkgs; [
+    	vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
+    	wget
+    	alacritty
+   	    micro
+   	    fastfetch
+   	    btop
+   	    git
+   	    kitty
+   	    zsh
+   	    foot
+    ])
+
+    ++
+
+    (with pkgs-unstable; [
+    	caelestia-shell
+    ]);
+
+ 
 
 
   # Some programs need SUID wrappers, can be configured further or are

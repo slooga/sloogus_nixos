@@ -15,7 +15,7 @@
 	
 
 	# goober blah
-	outputs = { self, nixpkgs, nixpkgs-unstable, home-manager, ... }: 
+	outputs = { self, nixpkgs, nixpkgs-unstable, home-manager, caelestia-shell, ... }: 
 	let 
 		
 		lib = nixpkgs.lib;
