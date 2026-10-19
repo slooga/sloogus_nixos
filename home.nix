@@ -76,6 +76,11 @@
   	force = true;
   	recursive = true;
   };
+  home.file.".config/kitty/" = {
+    source = ./config/kitty;
+    force = true;
+    recursive = true;
+  };
 
   
 
