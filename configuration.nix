@@ -99,6 +99,8 @@
   	localNetworkGameTransfers.openFirewall = true;
   };
 
+  
+
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
@@ -113,6 +115,8 @@
     btop
     git
     kitty
+    zsh
+    foot
   
   ];
 

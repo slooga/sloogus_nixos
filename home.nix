@@ -70,7 +70,7 @@
   home.sessionVariables = {
     # EDITOR = "emacs";
   };
-
+  /*
   home.file.".config/hypr/" = {
     source = ./config/hypr;
   	force = true;
@@ -81,7 +81,7 @@
     force = true;
     recursive = true;
   };
-
+  */
   
 
   # Let Home Manager install and manage itself.
