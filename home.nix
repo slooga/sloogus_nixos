@@ -94,7 +94,6 @@
 
   programs.caelestia = {
     enable = true;
-    cli.enabled = true;
     systemd = {
       enable = false; # if you prefer starting from your compositor
       target = "graphical-session.target";
@@ -133,12 +132,13 @@
 	      "btop".source           = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.local/share/caelestia-dots/btop";
 	      "micro".source          = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.local/share/caelestia-dots/micro";
 	      "Thunar".source         = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.local/share/caelestia-dots/thunar";
-	      "starship.toml".source  = config.lib.file.mkOutOfStoreSymlink "${config.home
-    
-  };
+	      "starship.toml".source  = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.local/share/caelestia-dots/starship.toml";
+	      
+       };
  
   
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 }
+
