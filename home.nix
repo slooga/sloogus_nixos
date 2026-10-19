@@ -71,7 +71,10 @@
     # EDITOR = "emacs";
   };
 
-  home.file.".config/hypr/hyprland.lua".source = ./config/hypr/hyprland.lua;
+  home.file = {
+    ".config/hypr/hyprland.lua".source = ./config/hypr/hyprland.lua;
+  	".config/hypr/hyprland.lua".force = true;
+  };
 
   
 
