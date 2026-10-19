@@ -10,12 +10,16 @@
 		      url = "github:caelestia-dots/shell";
 		      inputs.nixpkgs.follows = "nixpkgs";
 		    };
+	    caelestia-cli = {
+	    	url = "github:caelestia-dots/cli";
+	    	inputs.nixpkgs.follows = "nixpkgs";
+	    };
 	};
 	
 	
 
 	# goober blah
-	outputs = { self, nixpkgs, nixpkgs-unstable, home-manager, caelestia-shell, ... }: 
+	outputs = { self, nixpkgs, nixpkgs-unstable, home-manager, caelestia-shell, caelestia-cli, ... }: 
 	let 
 		
 		lib = nixpkgs.lib;

@@ -118,12 +118,13 @@
    	    kitty
    	    zsh
    	    foot
+   	    
     ])
 
     ++
 
     (with pkgs-unstable; [
-    	caelestia-shell
+    #	caelestia-shell.packages.nixos.with-cli
     ]);
 
  

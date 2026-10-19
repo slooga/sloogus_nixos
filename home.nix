@@ -1,6 +1,8 @@
-{ config, pkgs, ... }:
+{ config, pkgs, inputs, ... }:
 
 {
+
+  
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
   home.username = "sloogus";
@@ -14,6 +16,12 @@
   # want to update the value, then make sure to first check the Home Manager
   # release notes.
   home.stateVersion = "26.05"; # Please read the comment before changing.
+
+  imports = [
+  	inputs.caelestia-shell.homeManagerModules.default
+  ];
+
+  
 
   # The home.packages option allows you to install Nix packages into your
   # environment.
@@ -86,6 +94,7 @@
 
   programs.caelestia = {
     enable = true;
+    cli.enabled = true;
     systemd = {
       enable = false; # if you prefer starting from your compositor
       target = "graphical-session.target";
@@ -98,7 +107,7 @@
         { id = "bluetooth"; enabled = true; }
         { id = "battery"; enabled = false; }
       ];
-      paths.wallpaperDir = "~/Images";
+      paths.wallpaperDir = "~/Pictures/Wallpapers";
     };
     cli = {
       enable = true; # Also add caelestia-cli to path
@@ -106,7 +115,28 @@
         theme.enableGtk = false;
       };
     };
+
+	home.activation.cloneCaelestiaDots = config.lib.dag.entryAfter [ "writeBoundary" ] ''
+	        if [ ! -d "$HOME/.local/share/caelestia-dots" ]; then
+	           $DRY_RUN_CMD ${pkgs.git}/bin/git clone \
+	             https://github.com/caelestia-dots/caelestia.git \
+	             "$HOME/.local/share/caelestia-dots"
+	        fi
+	      '';
+	   
+	   
+	   xdg.configFile = {
+	      "hypr".source           = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.local/share/caelestia-dots/hypr";
+	      "fish".source           = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.local/share/caelestia-dots/fish";
+	      "foot".source           = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.local/share/caelestia-dots/foot";
+	      "fastfetch".source      = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.local/share/caelestia-dots/fastfetch";
+	      "btop".source           = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.local/share/caelestia-dots/btop";
+	      "micro".source          = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.local/share/caelestia-dots/micro";
+	      "Thunar".source         = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.local/share/caelestia-dots/thunar";
+	      "starship.toml".source  = config.lib.file.mkOutOfStoreSymlink "${config.home
+    
   };
+ 
   
 
   # Let Home Manager install and manage itself.
