@@ -20,9 +20,9 @@
 	];
 	   
 	programs.caelestia = {
-	      enable = true;
+	      enable = false;
 	      systemd = {
-	         enable = false;
+	         enable = true;
 	         target = "graphical-session.target";
 	      };
 	      cli.enable = true;
@@ -34,7 +34,7 @@
 	      home.activation.cloneCaelestiaDots = config.lib.dag.entryAfter [ "writeBoundary" ] ''
 	        if [ ! -d "$HOME/.local/share/caelestia-dots" ]; then
 	           $DRY_RUN_CMD ${pkgs.git}/bin/git clone \
-	             https://github.com/caelestia-dots/caelestia.git \
+	             git@github.com:slooga/caelestia \
 	             "$HOME/.local/share/caelestia-dots"
 	        fi
 	      '';
@@ -58,7 +58,8 @@
 	      "Thunar".force = true;        
 	      "starship.toml".force = true; 
 	   };
-	   
+
+  	   
 }
 
 /*
