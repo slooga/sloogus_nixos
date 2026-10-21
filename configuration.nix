@@ -52,12 +52,22 @@
 
   # Enable the KDE Plasma Desktop Environment.
   services.displayManager.sddm.enable = true;
-  services.desktopManager.plasma6.enable = true;
   programs.hyprland.enable = true;
   xdg.portal.enable = true;
   xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
   security.polkit.enable = true;
   services.gnome.gnome-keyring.enable = true;
+
+  fonts.packages = with pkgs; [
+      nerd-fonts.jetbrains-mono
+      nerd-fonts.caskaydia-cove
+      material-symbols
+      rubik
+      noto-fonts
+      noto-fonts-cjk-sans
+      noto-fonts-color-emoji
+  ];
+   
 
   # Configure keymap in X11
   services.xserver.xkb = {
@@ -122,6 +132,10 @@
    	    
    	    zsh
    	    foot
+   	    wget git curl
+   	    fish thunar starship fastfetch btop micro
+   	    adw-gtk3 papirus-icon-theme papirus-folders
+   	    wl-clipboard cliphist hyprpicker swappy grim slurp
    	    
     ])
 
