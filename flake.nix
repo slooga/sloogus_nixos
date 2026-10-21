@@ -34,7 +34,18 @@
 		nixosConfigurations = {
 			${hostname} = lib.nixosSystem {
 				inherit system;
-				modules = [ ./configuration.nix ];
+				modules = [
+				 ./configuration.nix 
+				 {
+				 	nixpkgs.overlays = [
+				 		(final: prev: {
+				 			caelestia-shell = caelestia-shell.packages.${system}.caelestia-shell;
+				 			caelestia-cli = caelestia-shell.inputs.caelestia-cli.packages.${system}.caelestia-cli;
+				 		})
+				 	];
+				 }
+				];
+				
 				specialArgs = {
 					inherit pkgs-unstable;
 				};

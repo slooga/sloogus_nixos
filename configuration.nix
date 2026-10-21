@@ -124,8 +124,7 @@
     ++
 
     (with pkgs-unstable; [
-    	caelestia-shell
-    	caelestia-cli
+    
     ]);
 
  
