@@ -11,9 +11,18 @@
 	home.username = "sloogus";
     home.homeDirectory = "/home/sloogus";
 	home.packages = with pkgs-unstable; [
-		caelestia-shell
-		caelestia-cli
+	#	caelestia-shell
+	#	caelestia-cli
 	];
+
+#	imports = [
+	#      inputs.caelestia-shell.homeManagerModules.default
+	#];
+	   
+	programs.caelestia = {
+	   enable = true;
+	};   
+	   
 }
 
 /*
