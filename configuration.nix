@@ -115,7 +115,7 @@
    	    fastfetch
    	    btop
    	    git
-   	    kitty
+   	    
    	    zsh
    	    foot
    	    
@@ -124,7 +124,7 @@
     ++
 
     (with pkgs-unstable; [
-    
+    	kitty
     ]);
 
  

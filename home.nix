@@ -1,8 +1,22 @@
-{ config, pkgs, inputs, ... }:
-
+{ config, pkgs, pkgs-unstable, inputs, ... }:
+#	home.packages = with pkgs-unstable; [
+#	  	caelestia-shell
+#	  	caelestia-cli
+#	  ];
+#
+	#programs.home-manager.enable = true;
 {
+	programs.home-manager.enable = true;
+	home.stateVersion = "26.05";
+	home.username = "sloogus";
+    home.homeDirectory = "/home/sloogus";
+	home.packages = with pkgs-unstable; [
+		caelestia-shell
+		caelestia-cli
+	];
+}
 
-  
+/*
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
   home.username = "sloogus";
@@ -17,25 +31,19 @@
   # release notes.
   home.stateVersion = "26.05"; # Please read the comment before changing.
 
-  imports = [
-  	inputs.caelestia-shell.homeManagerModules.default
-  ];
+ # imports = [
+  #	inputs.caelestia-shell.homeManagerModules.default
+  #];
 
   
 
   # The home.packages option allows you to install Nix packages into your
   # environment.
 
-  let
-  	caelestiaConfigDir = ./.;
-  in
-  {
-  	home.packages = [
-  		caelestia-shell
-  		caelestia-cli
-  	];
+  
+  
   	
-  }
+  
 
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
@@ -83,7 +91,7 @@
     force = true;
     recursive = true;
   };
-  */
+  
 
 
   programs.caelestia = {
@@ -135,4 +143,4 @@
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 }
-
+*/
