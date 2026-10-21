@@ -124,7 +124,8 @@
     ++
 
     (with pkgs-unstable; [
-    #	caelestia-shell.packages.nixos.with-cli
+    	inputs.caelestia-shell.packages.${system}.default
+    	inputs.caelestia-cli.packages.${system}.default
     ]);
 
  
