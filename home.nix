@@ -49,6 +49,14 @@
 	      "micro".source          = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.local/share/caelestia-dots/micro";
 	      "Thunar".source         = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.local/share/caelestia-dots/thunar";
 	      "starship.toml".source  = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.local/share/caelestia-dots/starship.toml";
+	      "hypr".force = true;
+	      "fish".force = true;          
+	      "foot".force = true;        
+	      "fastfetch".force = true;    
+	      "btop".force = true;        
+	      "micro".force = true;         
+	      "Thunar".force = true;        
+	      "starship.toml".force = true; 
 	   };
 	   
 }
