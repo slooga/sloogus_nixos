@@ -15,6 +15,12 @@
 	#	caelestia-cli
 	];
 
+	home.file.".config/caelestia" = {
+	    source = ./config/caelestia;
+	  	force = true;
+	  	recursive = true;
+	};
+	
 	imports = [
 		inputs.caelestia-shell.homeManagerModules.default
 	];
