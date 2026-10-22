@@ -20,6 +20,11 @@
 	  	force = true;
 	  	recursive = true;
 	};
+	home.file."~/Pictures/Wallpapers" = {
+		    source = ./wallpapers;
+		  	force = true;
+		  	recursive = true;
+    };
 	
 	imports = [
 		inputs.caelestia-shell.homeManagerModules.default
