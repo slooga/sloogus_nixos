@@ -56,14 +56,13 @@
   	};
   };
   services.displayManager.defaultSession = "xfce";
-  # Enable the KDE Plasma Desktop Environment.
   services.displayManager.sddm.enable = true;
   programs.hyprland.enable = true;
-  xdg.portal.enable = true;
-  xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
-  security.polkit.enable = true;
-  services.gnome.gnome-keyring.enable = true;
 
+
+  
+
+  # Caelestia font deps
   fonts.packages = with pkgs; [
       nerd-fonts.jetbrains-mono
       nerd-fonts.caskaydia-cove
@@ -73,6 +72,12 @@
       noto-fonts-cjk-sans
       noto-fonts-color-emoji
   ];
+
+  # Other deps 
+  xdg.portal.enable = true;
+  xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
+  security.polkit.enable = true;
+  services.gnome.gnome-keyring.enable = true;
    
 
   # Configure keymap in X11
@@ -133,9 +138,7 @@
     	alacritty
    	    micro
    	    fastfetch
-   	    btop
-   	    git
-   	    
+   	    btop   	    
    	    zsh
    	    foot
    	    wget git curl
@@ -151,6 +154,7 @@
     	kitty
     ]);
 
+  
  
 
 
