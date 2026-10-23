@@ -7,7 +7,7 @@
 {
   imports =
     [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
+      #./hardware-configuration-laptop.nix
     ];
 
   # Use the GRUB 2 boot loader.
@@ -133,6 +133,7 @@
   # You can use https://search.nixos.org/ to find more packages (and options).
   environment.systemPackages =
     (with pkgs; [
+    	ungit
     	vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
     	wget
     	alacritty

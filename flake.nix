@@ -35,7 +35,8 @@
 			${hostname} = lib.nixosSystem {
 				inherit system;
 				modules = [
-				 ./configuration.nix 
+				 ./configuration.nix
+				 ./hardware-configuration-laptop.nix 
 				 {
 				 	nixpkgs.overlays = [
 				 		(final: prev: {
@@ -45,6 +46,7 @@
 				 	];
 				 }
 				];
+				
 				
 				specialArgs = {
 					inherit pkgs-unstable;
