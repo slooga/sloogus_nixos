@@ -37,6 +37,7 @@
 	
 	imports = [
 		inputs.caelestia-shell.homeManagerModules.default
+		./config/waybar.nix
 	];
 	   
 	programs.caelestia = {
