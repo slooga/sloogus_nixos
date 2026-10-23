@@ -15,6 +15,12 @@
 	#	caelestia-cli
 	];
 
+	programs.git = {
+		enable = true;
+		userName = "slooga";
+		userEmail = "iamtheplum@gmail.com"
+	}
+
 	home.file.".config/caelestia" = {
 	    source = ./config/caelestia;
 	  	force = true;
