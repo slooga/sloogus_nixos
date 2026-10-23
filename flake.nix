@@ -6,6 +6,7 @@
 		nixpkgs-unstable.url = "nixpkgs/nixos-unstable";
 		home-manager.url = "github:nix-community/home-manager/release-26.05";
 		home-manager.inputs.nixpkgs.follows = "nixpkgs";
+		
 		caelestia-shell = {
 		      url = "github:caelestia-dots/shell";
 		      inputs.nixpkgs.follows = "nixpkgs";
@@ -19,7 +20,13 @@
 	
 
 	# goober blah
-	outputs = { self, nixpkgs, nixpkgs-unstable, home-manager, caelestia-shell, caelestia-cli, ... }@inputs: 
+	outputs = {
+		self,
+		nixpkgs,
+		nixpkgs-unstable,
+		home-manager,
+		caelestia-shell,
+		caelestia-cli, ... } @ inputs: 
 	let 
 		
 		lib = nixpkgs.lib;
@@ -29,21 +36,23 @@
 		hostname = "nixos";
 		pkgs = nixpkgs.legacyPackages.${system};
 		pkgs-unstable = nixpkgs-unstable.legacyPackages.${system};
-		overlays = [
+	 	
+	 	overlays = [
 	 		(final: prev: {
 	 			caelestia-shell = caelestia-shell.packages.${system}.caelestia-shell;
 	 			caelestia-cli = caelestia-shell.inputs.caelestia-cli.packages.${system}.caelestia-cli;
 	 		})
 	 	];
-	 	
 	in {
 		nixosConfigurations = {
 			"laptop" = lib.nixosSystem {
 				inherit system;
 				modules = [ 
-					#inherit overlays;
 					./configuration.nix 
 					./hardware-configuration-laptop.nix
+					{
+						nixpkgs.overlays = overlays;
+					}	
 				];
 				specialArgs = {
 					inherit pkgs-unstable;
