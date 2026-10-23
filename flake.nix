@@ -41,15 +41,15 @@
 			"laptop" = lib.nixosSystem {
 				inherit system;
 				modules = [ 
+					#inherit overlays;
 					./configuration.nix 
 					./hardware-configuration-laptop.nix
-					inherit overlays;
 				];
 				specialArgs = {
 					inherit pkgs-unstable;
 					inherit inputs;
 				};
-			}
+			};
 		};
 
 		homeConfigurations = {
