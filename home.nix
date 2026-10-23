@@ -17,8 +17,11 @@
 
 	programs.git = {
 		enable = true;
-		settings.user.name = "slooga";
-		settings.user.email = "iamtheplum@gmail.com";
+		settings = {
+			user.name = "slooga";
+			user.email = "iamtheplum@gmail.com";
+			init.defaultBranch = "main";
+		};		
 	};
 
 	home.file.".config/caelestia" = {
