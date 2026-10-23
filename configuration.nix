@@ -141,7 +141,7 @@
    	    btop   	    
    	    zsh
    	    foot
-   	    wget git curl
+   	    wget curl
    	    fish thunar starship fastfetch btop micro
    	    adw-gtk3 papirus-icon-theme papirus-folders
    	    wl-clipboard cliphist hyprpicker swappy grim slurp

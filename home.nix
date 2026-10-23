@@ -17,9 +17,9 @@
 
 	programs.git = {
 		enable = true;
-		userName = "slooga";
-		userEmail = "iamtheplum@gmail.com"
-	}
+		settings.user.name = "slooga";
+		settings.user.email = "iamtheplum@gmail.com";
+	};
 
 	home.file.".config/caelestia" = {
 	    source = ./config/caelestia;
