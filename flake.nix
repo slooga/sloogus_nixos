@@ -48,12 +48,12 @@
 				inherit pkgs-unstable;
 				inherit inputs;
 			};
-		}
+		};
 	
 	in {
 		nixosConfigurations.nixos-laptop = lib.nixosSystem {
 			inherit shared-config;
-			modules = sharedModules ++ [ ./hardware-configuration-laptop ];
+			modules = shared-config.lib.nixosSystem ++ [ ./hardware-configuration-laptop ];
 		};
 		homeConfigurations = {
 			sloogus = home-manager.lib.homeManagerConfiguration {

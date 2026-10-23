@@ -18,7 +18,7 @@
   # Use latest kernel.
   boot.kernelPackages = pkgs.linuxPackages_latest;
 
-  networking.hostName = "nixos"; # Define your hostname.
+  networking.hostName = "nixos-laptop"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # Configure network proxy if necessary
@@ -115,8 +115,9 @@
     ];
   };
 
-  # Install firefox.
+  # Install firefox
   programs.firefox.enable = true;
+  # Install steam
   programs.steam = {
   	enable = true;
   	remotePlay.openFirewall = true;
