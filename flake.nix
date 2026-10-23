@@ -29,32 +29,29 @@
 		hostname = "nixos";
 		pkgs = nixpkgs.legacyPackages.${system};
 		pkgs-unstable = nixpkgs-unstable.legacyPackages.${system};
-		shared-config = {
-			inherit system;
-			sharedModules = [
-			 ./configuration.nix 
-			 {
-			 	nixpkgs.overlays = [
-			 		(final: prev: {
-			 			caelestia-shell = caelestia-shell.packages.${system}.caelestia-shell;
-			 			caelestia-cli = caelestia-shell.inputs.caelestia-cli.packages.${system}.caelestia-cli;
-			 		})
-			 	];
-			 }
-			];
-			
-			
-			specialArgs = {
-				inherit pkgs-unstable;
-				inherit inputs;
-			};
-		};
-	
+		overlays = [
+	 		(final: prev: {
+	 			caelestia-shell = caelestia-shell.packages.${system}.caelestia-shell;
+	 			caelestia-cli = caelestia-shell.inputs.caelestia-cli.packages.${system}.caelestia-cli;
+	 		})
+	 	];
+	 	
 	in {
-		nixosConfigurations.nixos-laptop = lib.nixosSystem {
-			inherit shared-config;
-			modules = shared-config.lib.nixosSystem ++ [ ./hardware-configuration-laptop ];
+		nixosConfigurations = {
+			"laptop" = lib.nixosSystem {
+				inherit system;
+				modules = [ 
+					./configuration.nix 
+					./hardware-configuration-laptop.nix
+					inherit overlays;
+				];
+				specialArgs = {
+					inherit pkgs-unstable;
+					inherit inputs;
+				};
+			}
 		};
+
 		homeConfigurations = {
 			sloogus = home-manager.lib.homeManagerConfiguration {
 				inherit pkgs;
