@@ -29,14 +29,19 @@
 	  	force = true;
 	  	recursive = true;
 	};
-	home.file."~/Pictures/Wallpapers" = {
-		    source = ./wallpapers;
-		  	force = true;
-		  	recursive = true;
+	home.file."/home/sloogus/Pictures/Wallpapers" = {
+		 source = ./wallpapers;
+		 force = true;
+		 recursive = true;
     };
 
-	home.file."~/.config/hypr" = {
-		source = ./config/hypr;
+	home.file.".config/hypr" = {
+		source = ./config/end4/hypr;
+		force = true;
+		recursive = true;
+	};
+	home.file.".config/fish" = {
+		source = ./config/end4;
 		force = true;
 		recursive = true;
 	};
