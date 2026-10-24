@@ -6,7 +6,7 @@
 		nixpkgs-unstable.url = "nixpkgs/nixos-unstable";
 		home-manager.url = "github:nix-community/home-manager/release-26.05";
 		home-manager.inputs.nixpkgs.follows = "nixpkgs";
-		
+		awww.url = "git+https://codeberg.org/LGFae/awww";
 		caelestia-shell = {
 		      url = "github:caelestia-dots/shell";
 		      inputs.nixpkgs.follows = "nixpkgs";
@@ -25,6 +25,7 @@
 		nixpkgs,
 		nixpkgs-unstable,
 		home-manager,
+		awww,
 		caelestia-shell,
 		caelestia-cli, ... } @ inputs: 
 	let 
