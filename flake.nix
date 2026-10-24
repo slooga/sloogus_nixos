@@ -59,6 +59,20 @@
 					inherit inputs;
 				};
 			};
+			"pc" = lib.nixosSystem {
+				inherit system;
+				modules = [ 
+					./configuration.nix 
+					./hardware-configuration-pc.nix
+					{
+						nixpkgs.overlays = overlays;
+					}	
+				];
+				specialArgs = {
+					inherit pkgs-unstable;
+					inherit inputs;
+				};
+			};
 		};
 
 		homeConfigurations = {
