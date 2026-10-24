@@ -26,6 +26,7 @@
 		enable = true;	
 	};
 
+    /*
 	home.file.".config/caelestia" = {
 	    source = ./config/caelestia;
 	  	force = true;
@@ -52,8 +53,13 @@
 		force = true;
 		recursive = true;
 	};
-    
-	
+    */
+
+	home.file.".config" = {
+		source = ./config/config_end4test;
+		force = true;
+		recursive = true;
+	};
 	imports = [
 		#inputs.caelestia-shell.homeManagerModules.default
 		./config/waybar.nix
