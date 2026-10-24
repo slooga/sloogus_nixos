@@ -34,12 +34,20 @@
 		  	force = true;
 		  	recursive = true;
     };
+
+	home.file."~/.config/hypr" = {
+		source = ./config/hypr-end4;
+		force = true;
+		recursive = true;
+	};
+    
 	
 	imports = [
-		inputs.caelestia-shell.homeManagerModules.default
+		#inputs.caelestia-shell.homeManagerModules.default
 		./config/waybar.nix
 	];
 	   
+	/*
 	programs.caelestia = {
 	      enable = false;
 	      systemd = {
@@ -79,7 +87,7 @@
 	      "Thunar".force = true;        
 	      "starship.toml".force = true; 
 	   };
-
+		*/
   	   
 }
 
