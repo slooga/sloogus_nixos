@@ -36,7 +36,7 @@
     };
 
 	home.file."~/.config/hypr" = {
-		source = ./config/hypr-end4;
+		source = ./config/hypr;
 		force = true;
 		recursive = true;
 	};
