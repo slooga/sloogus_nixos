@@ -10,9 +10,8 @@
 	home.stateVersion = "26.05";
 	home.username = "sloogus";
     home.homeDirectory = "/home/sloogus";
-	home.packages = with pkgs-unstable; [
-	#	caelestia-shell
-	#	caelestia-cli
+	home.packages = with pkgs; [
+		starship
 	];
 
 	programs.git = {
@@ -22,6 +21,9 @@
 			user.email = "iamtheplum@gmail.com";
 			init.defaultBranch = "main";
 		};		
+	};
+	programs.fish = {
+		enable = true;	
 	};
 
 	home.file.".config/caelestia" = {
@@ -41,7 +43,12 @@
 		recursive = true;
 	};
 	home.file.".config/fish" = {
-		source = ./config/end4;
+		source = ./config/end4/fish;
+		force = true;
+		recursive = true;
+	};
+	home.file.".config/foot" = {
+		source = ./config/end4/foot;
 		force = true;
 		recursive = true;
 	};
