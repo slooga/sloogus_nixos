@@ -2,7 +2,7 @@
 # your system. Help is available in the configuration.nix(5) man page, on
 # https://search.nixos.org/options and in the NixOS manual (`nixos-help`).
 
-{ config, pkgs, pkgs-unstable, ... }:
+{ config, pkgs, inputs, pkgs-unstable, ... }:
 
 {
   imports =
@@ -147,6 +147,8 @@
    	    fish thunar starship fastfetch btop micro
    	    adw-gtk3 papirus-icon-theme papirus-folders
    	    wl-clipboard cliphist hyprpicker swappy grim slurp
+   	    inputs.awww.packages.${pkgs.stdenv.hostPlatform.system}.awww
+   	    lz4
    	    
     ])
 
