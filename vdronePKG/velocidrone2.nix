@@ -6,6 +6,7 @@
   	} ''
   		mkdir -p "$out"
   		unzip -q ${./production-launcher-debian.zip} -d "$out"
+  		chmod +x "$out/Launcher"
   		'';		
   	
     script = pkgs.writeShellApplication {

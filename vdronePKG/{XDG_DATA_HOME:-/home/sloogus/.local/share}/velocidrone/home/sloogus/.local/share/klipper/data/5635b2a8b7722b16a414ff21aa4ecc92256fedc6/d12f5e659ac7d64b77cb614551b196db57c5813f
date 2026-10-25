@@ -1,0 +1,3 @@
+<meta http-equiv="content-type" content="text/html; charset=utf-8"><pre class="highlight plaintext"><code>HostName github.com
+  User git
+  IdentityFile ~/.ssh/id_ed25519</code></pre>

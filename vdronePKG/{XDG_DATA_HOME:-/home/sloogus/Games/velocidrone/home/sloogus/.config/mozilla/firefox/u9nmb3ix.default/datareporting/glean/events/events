@@ -1,0 +1,16 @@
+{"timestamp":3176200,"category":"session_restore","name":"backup_can_be_loaded_session_file","extra":{"can_load":"true","path_key":"clean","glean_timestamp":"1792883827496","loadfail_reason":"N/A"}}
+{"timestamp":3176200,"category":"session_restore","name":"shutdown_success_session_startup","extra":{"shutdown_ok":"false","shutdown_reason":"N/A","glean_timestamp":"1792883827497"}}
+{"timestamp":3176847,"category":"ui_density","name":"mode","extra":{"window_height":"373","auto_adjustments_prior":"0","device_pixel_ratio":"1","window_width":"501","effective":"standard","touch_capable":"unknown","current":"automatic","on_startup":"true","glean_timestamp":"1792883828143"}}
+{"timestamp":3176897,"category":"jsonfile","name":"load_logins","extra":{"value":"error_notfounderror","glean_timestamp":"1792883828193"}}
+{"timestamp":3177020,"category":"pwmgr","name":"rust_init_status","extra":{"create_rust_store_ms":"21","result":"ok","init_rust_components_ms":"19","backend":"rust","total_ms":"151","glean_timestamp":"1792883828317"}}
+{"timestamp":3177037,"category":"pwmgr","name":"storage_operation_time","extra":{"duration_ms":"16","operation":"count","backend":"rust","glean_timestamp":"1792883828333"}}
+{"timestamp":3177044,"category":"pwmgr","name":"storage_operation_time","extra":{"backend":"rust","duration_ms":"23","operation":"count","glean_timestamp":"1792883828340"}}
+{"timestamp":3177153,"category":"nimbus_events","name":"startup_database_consistency","extra":{"primary":"database","glean_timestamp":"1792883828449","total_store_count":"2","db_active_count":"2","store_active_count":"2","trigger":"startup","total_db_count":"2"}}
+{"timestamp":3177246,"category":"jsonfile","name":"load_autofillprofiles","extra":{"glean_timestamp":"1792883828542","value":"error_notfounderror"}}
+{"timestamp":3177286,"category":"doh","name":"state_rollback","extra":{"value":"null","glean_timestamp":"1792883828582"}}
+{"timestamp":3177600,"category":"containers","name":"container_profile_loaded","extra":{"containers":"4","glean_timestamp":"1792883828896"}}
+{"timestamp":3177698,"category":"upgrade_dialog","name":"trigger_reason","extra":{"value":"not-major","glean_timestamp":"1792883828994"}}
+{"timestamp":3178072,"category":"nimbus_events","name":"is_ready","extra":{"glean_timestamp":"1792883829369"}}
+{"timestamp":3178171,"category":"translations","name":"identify_page_language","extra":{"identification_time":"94.63047099999994","confident":"true","identified_language":"en","extracted_code_units":"4097","glean_timestamp":"1792883829467","html_lang_attribute":""}}
+{"timestamp":3178470,"category":"glean","name":"session_start","extra":{"glean_timestamp":"3178470","sampled_in":"true","session_seq":"9","session_start_time":"2026-10-25T12:17:09.765+13:00","session_id":"592f616f-b284-43bc-a300-d8cc7e0999a2"}}
+{"timestamp":3182487,"category":"doh","name":"state_shutdown","extra":{"value":"null","glean_timestamp":"1792883833783"},"session":{"session_id":"592f616f-b284-43bc-a300-d8cc7e0999a2","session_seq":9,"event_seq":0,"session_sample_rate":1.0,"session_start_time":"2026-10-25T12:17:09.765+13:00"}}

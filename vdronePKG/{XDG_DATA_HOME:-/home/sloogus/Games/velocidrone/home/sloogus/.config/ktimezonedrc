@@ -1,0 +1,4 @@
+[TimeZones]
+LocalZone=Pacific/Auckland
+ZoneinfoDir=/etc/zoneinfo
+Zonetab=/etc/zoneinfo/zone.tab
