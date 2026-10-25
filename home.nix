@@ -47,11 +47,7 @@
 	  	force = true;
 	  	recursive = true;
 	};
-	home.file."/home/sloogus/Pictures/Wallpapers" = {
-		 source = ./wallpapers;
-		 force = true;
-		 recursive = true;
-    };
+	
 
 	home.file.".config/hypr" = {
 		source = ./config/end4/hypr;
@@ -75,6 +71,11 @@
 		force = true;
 		recursive = true;
 	};
+	home.file."/home/sloogus/Pictures/Wallpapers" = {
+		 source = ./wallpapers;
+		 force = true;
+		 recursive = true;
+    };
 	imports = [
 		#inputs.caelestia-shell.homeManagerModules.default
 		./config/waybar.nix
