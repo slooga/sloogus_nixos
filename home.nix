@@ -12,6 +12,7 @@
     home.homeDirectory = "/home/sloogus";
 	home.packages = with pkgs; [
 		starship
+		matuwall
 	];
 
 	programs.git = {

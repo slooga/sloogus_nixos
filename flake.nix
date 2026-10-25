@@ -92,7 +92,12 @@
 		homeConfigurations = {
 			sloogus = home-manager.lib.homeManagerConfiguration {
 				inherit pkgs;
-				modules = [ ./home.nix ];
+				modules = [
+				 ./home.nix
+					{
+				 		nixpkgs.overlays = overlays;
+					}
+				];
 				extraSpecialArgs = {
 					inherit pkgs-unstable;
 					inherit inputs;
