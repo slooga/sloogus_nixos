@@ -1,7 +1,0 @@
-InstalledApps=org.kde.kate.desktop,micro.desktop,org.kde.gwenview.desktop,org.kde.okular.desktop,org.kde.khelpcenter.desktop,org.kde.kinfocenter.desktop,firefox.desktop,org.kde.elisa.desktop,org.kde.okular.desktop,org.kde.drkonqi.coredump.gui.desktop,org.kde.discover.desktop,org.kde.dolphin.desktop,org.kde.kinfocenter.desktop,org.kde.konsole.desktop,org.kde.kwalletmanager.desktop,cups.desktop,org.kde.kmenuedit.desktop,nixos-manual.desktop,org.kde.plasma-systemmonitor.desktop,systemsettings.desktop,xterm.desktop,org.kde.ark.desktop,org.kde.plasma.emojier.desktop,org.kde.kate.desktop,org.kde.kwrite.desktop,micro.desktop,org.kde.qrca.desktop,org.kde.spectacle.desktop,vim.desktop
-
-[Application][micro.desktop]
-FirstSeen=2026,10,22
-
-[Application][vim.desktop]
-FirstSeen=2026,10,22

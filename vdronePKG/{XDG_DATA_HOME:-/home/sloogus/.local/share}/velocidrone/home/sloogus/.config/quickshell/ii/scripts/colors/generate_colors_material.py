@@ -1,1 +1,0 @@
-/nix/store/qk68f6rcg9iy7bnivf08myd2zj0rnwa2-home-manager-files/.config/quickshell/ii/scripts/colors/generate_colors_material.py

@@ -1,1 +1,0 @@
-/nix/store/qk68f6rcg9iy7bnivf08myd2zj0rnwa2-home-manager-files/.config/quickshell/ii/translations/tools/translation-manager.py

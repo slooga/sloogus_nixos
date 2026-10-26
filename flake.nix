@@ -6,7 +6,10 @@
 		nixpkgs-unstable.url = "nixpkgs/nixos-unstable";
 		home-manager.url = "github:nix-community/home-manager/release-26.05";
 		home-manager.inputs.nixpkgs.follows = "nixpkgs";
-
+		stylix = {
+			url = "github:nix-community/stylix/release-26.05";
+			inputs.nixpkgs.follows = "nixpkgs";	
+		};
 		# Wallpaper packages
 		awww = {
 			url = "git+https://codeberg.org/LGFae/awww";
@@ -37,6 +40,7 @@
 		nixpkgs-unstable,
 		home-manager,
 		awww,
+		stylix,
 		matuwall,
 		caelestia-shell,
 		caelestia-cli, ... } @ inputs: 
@@ -62,6 +66,7 @@
 			"laptop" = lib.nixosSystem {
 				inherit system;
 				modules = [ 
+					stylix.nixosModules.stylix
 					./configuration.nix 
 					./hardware-configuration-laptop.nix
 					{
@@ -76,6 +81,7 @@
 			"pc" = lib.nixosSystem {
 				inherit system;
 				modules = [ 
+					stylix.nixosModules.stylix
 					./configuration.nix 
 					./hardware-configuration-pc.nix
 					{

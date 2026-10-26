@@ -34,6 +34,7 @@
 	programs.fish = {
 		enable = true;	
 	};
+	#programs.caelestia.enable = true;
 	
 	home.file."/home/sloogus/Pictures/Wallpapers" = {
 		 source = ./wallpapers;
@@ -43,8 +44,8 @@
 	imports = [
 		#inputs.caelestia-shell.homeManagerModules.default
 		./config/waybar.nix
-		#./sloogus_rice.nix
-		./caelestia.nix
+		./sloogus_rice.nix
+		#./caelestia.nix
 	];
   	   
 }

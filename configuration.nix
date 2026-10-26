@@ -2,7 +2,7 @@
 # your system. Help is available in the configuration.nix(5) man page, on
 # https://search.nixos.org/options and in the NixOS manual (`nixos-help`).
 
-{ config, pkgs, inputs, pkgs-unstable, ... }:
+{ config, pkgs, inputs, pkgs-unstable, stylix, ... }:
 
 {
   imports =
@@ -58,7 +58,12 @@
   services.displayManager.defaultSession = "xfce";
   services.displayManager.sddm.enable = true;
   programs.hyprland.enable = true;
-
+  stylix = {
+	enable = true;
+	base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-light-hard.yaml";
+	
+  	
+  };
 
   
 
@@ -79,7 +84,7 @@
   security.polkit.enable = true;
   services.gnome.gnome-keyring.enable = true;
    
-
+  
   # Configure keymap in X11
   services.xserver.xkb = {
     layout = "us";
@@ -125,6 +130,7 @@
   	localNetworkGameTransfers.openFirewall = true;
   };
 
+  
   
 
   # Allow unfree packages
