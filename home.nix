@@ -43,8 +43,8 @@
 	imports = [
 		#inputs.caelestia-shell.homeManagerModules.default
 		./config/waybar.nix
-		./sloogus_rice.nix
-		#./caelestia.nix
+		#./sloogus_rice.nix
+		./caelestia.nix
 	];
   	   
 }

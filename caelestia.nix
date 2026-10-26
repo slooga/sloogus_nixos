@@ -1,4 +1,4 @@
-{ config, pkgs, pkgs-unstable, inputs ... }:
+{ config, pkgs, pkgs-unstable, inputs, ... }:
 {
 	home.file.".config/caelestia" = {
 	    source = ./config/caelestia;
