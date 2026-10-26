@@ -99,6 +99,7 @@
 			sloogus = home-manager.lib.homeManagerConfiguration {
 				inherit pkgs;
 				modules = [
+				 stylix.homeModules.stylix
 				 ./home.nix
 					{
 				 		nixpkgs.overlays = overlays;

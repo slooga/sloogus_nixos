@@ -61,8 +61,8 @@
   stylix = {
 	enable = true;
 	base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-light-hard.yaml";
-	autoenable = true;
-  	
+	autoEnable = false;
+	image = "~/Pictures/Wallpapers/1338277.png";
   };
 
   
