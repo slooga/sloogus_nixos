@@ -1,5 +1,7 @@
-{ config, pkgs, pkgs-unstable, inputs, ... }:
+{ config, pkgs, pkgs-unstable, inputs, stylix, ... }:
 {
+    
+	
 	programs.rofi = {
 		enable = true;
 		theme = "sidebar";
