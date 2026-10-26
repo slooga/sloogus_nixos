@@ -150,7 +150,7 @@
    	    inputs.awww.packages.${pkgs.stdenv.hostPlatform.system}.awww
    	    lz4
    	    librewolf
-   	    (callPackage ./vdronePKG/velocidrone2.nix {})
+   	    #(callPackage ./vdronePKG/velocidrone2.nix {})
    	    
     ])
 
