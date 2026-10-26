@@ -17,12 +17,17 @@
 			show-icons = true;
 		};
 	};
-	    
-	
-	home.file.".config" = {
-		source = ./config/config_end4test;
-		force = true;
-		recursive = true;
+	stylix = {
+		enable = true;
+		base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-light-hard.yaml";
+		autoEnable = false;
+		image = "~/Pictures/Wallpapers/1338277.png";
 	};
+	
+	#home.file.".config" = {
+	#	source = ./config/config_end4test;
+	#	force = true;
+	#	recursive = true;
+	#};
 	
 }
