@@ -19,15 +19,8 @@
 		#caelestia-cli
 		#caelestia-shell
 	]);
-	sharedModules = [
-		{
-			stylix.targets.xyz.enable = true;
-		}
-	];
 
-	config.home-manager.sharedModules = [
-		stylix.targets.foot.enable = true;	
-	];
+
 
 	programs.git = {
 		enable = true;
@@ -37,6 +30,8 @@
 			init.defaultBranch = "main";
 		};		
 	};
+	programs.foot.enable = true;
+	programs.alacritty.enable = true;
 	
 	programs.fish = {
 		enable = true;	
