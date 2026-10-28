@@ -20,7 +20,7 @@
 	      home.activation.cloneCaelestiaDots = config.lib.dag.entryAfter [ "writeBoundary" ] ''
 	        if [ ! -d "$HOME/.local/share/caelestia-dots" ]; then
 	           $DRY_RUN_CMD ${pkgs.git}/bin/git clone \
-	             https://github.com/slooga/caelestia.git \
+	             https://github.com/caelestia-dots/caelestia.git \
 	             "$HOME/.local/share/caelestia-dots"
 	        fi
 	      '';

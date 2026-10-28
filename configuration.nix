@@ -58,12 +58,6 @@
   services.displayManager.defaultSession = "xfce";
   services.displayManager.sddm.enable = true;
   programs.hyprland.enable = true;
-  stylix = {
-	enable = true;
-	base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-light-hard.yaml";
-	autoEnable = false;
-	image = "~/Pictures/Wallpapers/1338277.png";
-  };
 
   
 

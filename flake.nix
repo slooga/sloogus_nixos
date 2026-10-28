@@ -66,7 +66,7 @@
 			"laptop" = lib.nixosSystem {
 				inherit system;
 				modules = [ 
-					stylix.nixosModules.stylix
+					#stylix.nixosModules.stylix
 					./configuration.nix 
 					./hardware-configuration-laptop.nix
 					{
@@ -81,7 +81,7 @@
 			"pc" = lib.nixosSystem {
 				inherit system;
 				modules = [ 
-					stylix.nixosModules.stylix
+					#stylix.nixosModules.stylix
 					./configuration.nix 
 					./hardware-configuration-pc.nix
 					{
@@ -99,7 +99,7 @@
 			sloogus = home-manager.lib.homeManagerConfiguration {
 				inherit pkgs;
 				modules = [
-				 stylix.homeModules.stylix
+				 #stylix.homeModules.stylix
 				 ./home.nix
 					{
 				 		nixpkgs.overlays = overlays;

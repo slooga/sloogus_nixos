@@ -6,7 +6,7 @@
 	programs.home-manager.enable = true;
 	home.stateVersion = "26.05";
 	home.username = "sloogus";
-    home.homeDirectory = "/home/sloogus";
+        home.homeDirectory = "/home/sloogus";
 	home.packages =
 	(with pkgs; [
 		starship
@@ -30,6 +30,7 @@
 			init.defaultBranch = "main";
 		};		
 	};
+        /*
 	programs.foot.enable = true;
 	programs.alacritty.enable = true;
 	
@@ -37,17 +38,17 @@
 		enable = true;	
 	};
 	#programs.caelestia.enable = true;
-	
+        */	
 	home.file."/home/sloogus/Pictures/Wallpapers" = {
 		 source = ./wallpapers;
 		 force = true;
 		 recursive = true;
-    };
+        };
 	imports = [
-		#inputs.caelestia-shell.homeManagerModules.default
-		./config/waybar.nix
-		./sloogus_rice.nix
-		#./caelestia.nix
+		inputs.caelestia-shell.homeManagerModules.default
+		#./config/waybar.nix
+		#./sloogus_rice.nix
+		./caelestia.nix
 	];
   	   
 }
